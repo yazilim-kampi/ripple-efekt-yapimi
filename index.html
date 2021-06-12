@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ripple Efekt</title>
+    <style>
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: #ffc500;
+            color: #1f1f1f;
+            width: 6rem;
+            font-size: 1rem;
+            height: 2rem;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            left: 50%;
+            top: 5rem;
+            transform: translate(-50%);
+        }
+        
+        button::before {
+            content: "";
+            position: absolute;
+            background-color: #977400;
+            border-radius: 50%;
+            padding: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+            transition: 700ms;
+        }
+        
+        button:active::before {
+            transition: 0s;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(0);
+        }
+    </style>
+</head>
+
+<body>
+    <button>Tıklayınız</button>
+</body>
+
+</html>
